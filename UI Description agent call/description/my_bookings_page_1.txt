@@ -1,0 +1,93 @@
+# Page type: my_bookings_page
+
+@abstractmethod
+def page_title(self):
+    '''The title of the page, indicating the current section is "My Bookings".'''
+
+@abstractmethod
+def last_synced_label(self):
+    '''Label showing the timestamp of the last data synchronization.'''
+
+@abstractmethod
+def pull_to_refresh_label(self):
+    '''Instruction text indicating that pulling down will refresh the data.'''
+
+@abstractmethod
+def bus_icon(self):
+    '''Icon representing a bus, indicating the type of booking.'''
+
+@abstractmethod
+def booking_date_label(self):
+    '''The date of the booking.'''
+
+@abstractmethod
+def booking_day_label(self):
+    '''The day of the week for the booking date.'''
+
+@abstractmethod
+def booking_time_label(self):
+    '''The departure or booking time.'''
+
+@abstractmethod
+def bus_ticket_label(self):
+    '''Label identifying the item as a bus ticket.'''
+
+@abstractmethod
+def route_label(self):
+    '''The route or destination of the bus ticket.'''
+
+@abstractmethod
+def operator_label(self):
+    '''The name of the bus operator or company.'''
+
+@abstractmethod
+def booking_status_label(self):
+    '''The current status of the booking, e.g., CONFIRMED.'''
+
+@abstractmethod
+def close_button(self):
+    '''Button or link to close or dismiss the booking details view.'''
+
+@abstractmethod
+def notification_icon_button(self):
+    '''Button with a bell icon, likely for setting reminders or notifications.'''
+
+@abstractmethod
+def download_icon_button(self):
+    '''Button with a download icon, likely for downloading the ticket.'''
+
+@abstractmethod
+def payment_icon_button(self):
+    '''Button with a hand holding a coin icon, possibly for payment or refund options.'''
+
+@abstractmethod
+def info_icon_button(self):
+    '''Button with an information icon, likely for viewing booking details or help.'''
+
+@abstractmethod
+def completed_bookings_button(self):
+    '''Button to filter or view completed bookings.'''
+
+@abstractmethod
+def cancelled_bookings_button(self):
+    '''Button or text label to filter or view cancelled bookings.'''
+
+@abstractmethod
+def show_bookings_button(self):
+    '''Button or link to display the list of bookings.'''
+
+@abstractmethod
+def home_navigation_item(self):
+    '''Navigation item in the bottom bar to go to the Home page.'''
+
+@abstractmethod
+def my_bookings_navigation_item(self):
+    '''Navigation item in the bottom bar to go to the My Bookings page (currently active).'''
+
+@abstractmethod
+def help_navigation_item(self):
+    '''Navigation item in the bottom bar to go to the Help section.'''
+
+@abstractmethod
+def my_account_navigation_item(self):
+    '''Navigation item in the bottom bar to go to the My Account page.'''

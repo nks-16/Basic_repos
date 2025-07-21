@@ -1,0 +1,73 @@
+# Page type: my_account_page
+
+@abstractmethod
+def page_title(self):
+    '''Title of the page, indicating it is the user's account section.'''
+
+@abstractmethod
+def profile_icon(self):
+    '''Icon representing the user's profile.'''
+
+@abstractmethod
+def user_name_label(self):
+    '''Label displaying the user's name.'''
+
+@abstractmethod
+def user_details_label(self):
+    '''Label displaying user details like gender, age, phone number, and email.'''
+
+@abstractmethod
+def my_bookings_menu_item(self):
+    '''Menu item to navigate to the user's bookings.'''
+
+@abstractmethod
+def wallet_menu_item(self):
+    '''Menu item to navigate to the user's wallet.'''
+
+@abstractmethod
+def buy_pass_menu_item(self):
+    '''Menu item to navigate to the option to buy a pass.'''
+
+@abstractmethod
+def co_passengers_menu_item(self):
+    '''Menu item to manage co-passengers for bus bookings.'''
+
+@abstractmethod
+def refer_and_earn_menu_item(self):
+    '''Menu item to access the refer and earn program.'''
+
+@abstractmethod
+def offers_menu_item(self):
+    '''Menu item to view available offers.'''
+
+@abstractmethod
+def help_menu_item(self):
+    '''Menu item to access help or support.'''
+
+@abstractmethod
+def about_us_menu_item(self):
+    '''Menu item to view information about the application or company.'''
+
+@abstractmethod
+def settings_menu_item(self):
+    '''Menu item to access application settings.'''
+
+@abstractmethod
+def logout_button(self):
+    '''Button to log out of the user's account.'''
+
+@abstractmethod
+def home_tab(self):
+    '''Navigation tab to go to the home page.'''
+
+@abstractmethod
+def my_bookings_tab(self):
+    '''Navigation tab to go to the user's bookings page.'''
+
+@abstractmethod
+def help_tab(self):
+    '''Navigation tab to go to the help page.'''
+
+@abstractmethod
+def my_account_tab(self):
+    '''Navigation tab to go to the user's account page (currently active).'''

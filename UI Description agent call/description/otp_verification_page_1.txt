@@ -1,0 +1,57 @@
+# Page type: otp_verification_page
+
+@abstractmethod
+def close_button(self):
+    '''Button to close the current screen or modal.'''
+
+@abstractmethod
+def app_logo(self):
+    '''The logo of the redBus application.'''
+
+@abstractmethod
+def mobile_number_label(self):
+    '''Label indicating the field for the mobile number.'''
+
+@abstractmethod
+def mobile_number_text(self):
+    '''Displays the mobile number entered by the user.'''
+
+@abstractmethod
+def edit_mobile_number_link(self):
+    '''Link to edit the mobile number.'''
+
+@abstractmethod
+def one_time_password_label(self):
+    '''Label indicating the field for the one-time password (OTP).'''
+
+@abstractmethod
+def otp_input_field_1(self):
+    '''Input field for the first digit of the OTP.'''
+
+@abstractmethod
+def otp_input_field_2(self):
+    '''Input field for the second digit of the OTP.'''
+
+@abstractmethod
+def otp_input_field_3(self):
+    '''Input field for the third digit of the OTP.'''
+
+@abstractmethod
+def otp_input_field_4(self):
+    '''Input field for the fourth digit of the OTP.'''
+
+@abstractmethod
+def otp_input_field_5(self):
+    '''Input field for the fifth digit of the OTP.'''
+
+@abstractmethod
+def otp_input_field_6(self):
+    '''Input field for the sixth digit of the OTP.'''
+
+@abstractmethod
+def verify_otp_button(self):
+    '''Button to submit the entered OTP for verification.'''
+
+@abstractmethod
+def resend_otp_button(self):
+    '''Button to request a new OTP, showing a countdown timer.'''

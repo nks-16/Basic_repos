@@ -1,0 +1,53 @@
+# Page type: help_page
+
+@abstractmethod
+def app_logo(self):
+    '''The logo and name of the application, "red:Buddy".'''
+
+@abstractmethod
+def language_selector(self):
+    '''An icon and text indicating the current language setting, allowing the user to change it.'''
+
+@abstractmethod
+def view_all_issues_list_item(self):
+    '''A list item with an icon and text "View all issues", likely a link to a page listing common problems or support topics.'''
+
+@abstractmethod
+def new_bus_booking_help_list_item(self):
+    '''A list item with an icon and text "New bus booking help", likely a link to help specific to booking a new bus ticket.'''
+
+@abstractmethod
+def offers_list_item(self):
+    '''A list item with an icon and text "Offers", likely a link to help related to promotions or discounts.'''
+
+@abstractmethod
+def buss_pass_list_item(self):
+    '''A list item with an icon and text "Buss Pass", likely a link to help related to bus passes.'''
+
+@abstractmethod
+def faqs_section_header(self):
+    '''A header labeling the section below as FAQs and prompting the user to select a help topic.'''
+
+@abstractmethod
+def redbus_bus_tickets_link(self):
+    '''A link or button with the redBus logo and text "Bus Tickets", likely navigating to help specific to bus ticket bookings.'''
+
+@abstractmethod
+def floating_help_button(self):
+    '''A circular floating action button with a headset icon, likely providing direct access to customer support or a help assistant.'''
+
+@abstractmethod
+def home_navigation_item(self):
+    '''An icon and label for navigating to the home screen.'''
+
+@abstractmethod
+def my_bookings_navigation_item(self):
+    '''An icon and label for navigating to the user's bookings.'''
+
+@abstractmethod
+def help_navigation_item(self):
+    '''An icon and label for navigating to the help section (currently active).'''
+
+@abstractmethod
+def my_account_navigation_item(self):
+    '''An icon and label for navigating to the user's account settings.'''

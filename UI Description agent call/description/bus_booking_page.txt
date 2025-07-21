@@ -1,0 +1,81 @@
+# Page type: bus_booking_page
+
+@abstractmethod
+def page_title(self):
+    '''Title of the page indicating the service offered.'''
+
+@abstractmethod
+def redbus_logo(self):
+    '''Logo of the redBus service.'''
+
+@abstractmethod
+def one_way_button(self):
+    '''Button to select a one-way trip.'''
+
+@abstractmethod
+def round_trip_button(self):
+    '''Button to select a round trip.'''
+
+@abstractmethod
+def source_input_field(self):
+    '''Input field to enter the starting location for the bus journey.'''
+
+@abstractmethod
+def destination_input_field(self):
+    '''Input field to enter the destination location for the bus journey.'''
+
+@abstractmethod
+def swap_locations_button(self):
+    '''Button to swap the source and destination locations.'''
+
+@abstractmethod
+def date_selection_field(self):
+    '''Field displaying the selected journey date and options for today/tomorrow.'''
+
+@abstractmethod
+def today_button(self):
+    '''Button to select today's date for the journey.'''
+
+@abstractmethod
+def tomorrow_button(self):
+    '''Button to select tomorrow's date for the journey.'''
+
+@abstractmethod
+def return_date_input_field(self):
+    '''Input field to select the return date for a round trip (optional).'''
+
+@abstractmethod
+def search_button(self):
+    '''Button to initiate the search for bus tickets based on the entered criteria.'''
+
+@abstractmethod
+def you_can_also_book_label(self):
+    '''Label indicating other booking options available.'''
+
+@abstractmethod
+def ferry_booking_option(self):
+    '''Option to book ferry tickets.'''
+
+@abstractmethod
+def buy_pass_option(self):
+    '''Option to buy a pass.'''
+
+@abstractmethod
+def stage_carriage_booking_option(self):
+    '''Option to book stage carriage tickets.'''
+
+@abstractmethod
+def home_navigation_button(self):
+    '''Navigation button to go to the home screen.'''
+
+@abstractmethod
+def my_bookings_navigation_button(self):
+    '''Navigation button to view user's bookings.'''
+
+@abstractmethod
+def help_navigation_button(self):
+    '''Navigation button to access help or support.'''
+
+@abstractmethod
+def my_account_navigation_button(self):
+    '''Navigation button to access user account details.'''

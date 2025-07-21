@@ -1,0 +1,77 @@
+# Page type: my_bookings_page
+
+@abstractmethod
+def page_title(self):
+    '''Title of the page indicating it displays user bookings.'''
+
+@abstractmethod
+def last_synced_text(self):
+    '''Text indicating the time the booking data was last updated.'''
+
+@abstractmethod
+def pull_to_refresh_instruction(self):
+    '''Instruction text telling the user how to refresh the booking list.'''
+
+@abstractmethod
+def bus_icon(self):
+    '''Icon representing a bus, indicating the type of booking.'''
+
+@abstractmethod
+def booking_date(self):
+    '''The day of the month for the booking.'''
+
+@abstractmethod
+def booking_day(self):
+    '''The day of the week for the booking.'''
+
+@abstractmethod
+def booking_time(self):
+    '''The departure or event time for the booking.'''
+
+@abstractmethod
+def booking_type_label(self):
+    '''Label indicating the type of booking, e.g., "Bus ticket".'''
+
+@abstractmethod
+def booking_status(self):
+    '''The current status of the booking, e.g., "CONFIRMED".'''
+
+@abstractmethod
+def booking_route(self):
+    '''The origin and destination of the booking.'''
+
+@abstractmethod
+def booking_operator(self):
+    '''The name of the service provider or operator for the booking.'''
+
+@abstractmethod
+def more_details_link(self):
+    '''Link to view more details about the specific booking.'''
+
+@abstractmethod
+def completed_bookings_button(self):
+    '''Button to filter and display completed bookings.'''
+
+@abstractmethod
+def cancelled_bookings_button(self):
+    '''Button to filter and display cancelled bookings.'''
+
+@abstractmethod
+def show_bookings_button(self):
+    '''Button to trigger the display of filtered bookings.'''
+
+@abstractmethod
+def home_navigation_item(self):
+    '''Navigation item to go to the home page.'''
+
+@abstractmethod
+def my_bookings_navigation_item(self):
+    '''Navigation item to go to the my bookings page.'''
+
+@abstractmethod
+def help_navigation_item(self):
+    '''Navigation item to access help or support.'''
+
+@abstractmethod
+def my_account_navigation_item(self):
+    '''Navigation item to go to the user's account settings or profile.'''
