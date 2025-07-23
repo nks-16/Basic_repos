@@ -7,9 +7,9 @@ import re
 from pathlib import Path
 
 # === Configuration ===
-API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
+API_KEY = "AIzaSyCLlNIYeNRWSpj1pa7eOYvcIkkUq-86cTg"
 GEMINI_API_URL = (
-    "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent"
+    ""
 )
 
 PROMPT_TEXT = """You are an expert UI analyst. Your task is to analyze user-uploaded screenshots of web or app designs (e.g. Figma screens) and identify all visible user interface elements in the image.

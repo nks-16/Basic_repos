@@ -1,0 +1,123 @@
+from abc import ABC, abstractmethod
+from typing import Annotated
+
+class LocatorTools(ABC):
+    @abstractmethod
+    def view_details_link(self):
+        '''Opens the detailed trip information page for users to review all aspects of their journey.'''
+
+    @abstractmethod
+    def edit_contact_details_link(self):
+        '''Navigates to the contact details editing interface, allowing users to update their personal information.'''
+      
+    @abstractmethod
+    def amount_expand_button(self):
+        '''Displays a comprehensive breakdown of the total amount when the plus button is activated in the amount section.'''
+
+    @abstractmethod
+    def pay_now_button(self):
+        '''Initiates the payment workflow for the current transaction when selected.'''
+
+    @abstractmethod
+    def terms_and_conditions_link(self):
+        '''Opens the Terms & Conditions document for user review and acceptance.'''
+
+    @abstractmethod
+    def privacy_policy_link(self):
+        '''Displays the Privacy Policy document for users to review data handling practices.'''
+
+    @abstractmethod
+    def close_booking_details_button(self):
+        '''Closes the booking details modal, returning users to the previous interface.'''
+
+    @abstractmethod
+    def decrement_quantity_button(self, position: Annotated[int, "positive = forward index, negative = reverse index, default = 1"]):
+        '''Reduces the quantity or amount at the specified position using the decrement button.'''
+    
+    def close_price_breakup_button(self):
+        '''Closes the price breakup modal, returning users to the main payment or summary view.'''
+
+
+
+
+
+Ferri_details
+
+from abc import ABC, abstractmethod
+from typing import Annotated
+
+class LocatorTools(ABC):
+    # Format 1 - Unique Elements
+    @abstractmethod
+    def ferry_logo(self):
+        '''Displays the logo of the ferry operator for brand identification.'''
+
+    @abstractmethod
+    def trip_price(self):
+        '''Shows the total price for the selected ferry trip.'''
+
+    @abstractmethod
+    def passenger_count(self):
+        '''Indicates the number of passengers included in the booking.'''
+
+    @abstractmethod
+    def ferry_operator_name(self):
+        '''Displays the name of the ferry operator for the current trip.'''
+
+    @abstractmethod
+    def trip_duration(self):
+        '''Shows the total duration of the ferry journey.'''
+
+    @abstractmethod
+    def trip_route(self):
+        '''Displays the route of the trip, including origin and destination points.'''
+
+    @abstractmethod
+    def ferry_rating(self):
+        '''Shows the average rating for the ferry operator based on user feedback.'''
+
+    @abstractmethod
+    def total_reviews_count(self):
+        '''Indicates the total number of user reviews for the ferry operator.'''
+
+    @abstractmethod
+    def rating_and_review_section(self):
+        '''Displays user ratings and reviews for the ferry operator.'''
+
+    @abstractmethod
+    def policy_section(self):
+        '''Shows all relevant policies associated with the ferry trip.'''
+
+    @abstractmethod
+    def boarding_points_tab(self):
+        '''Opens the tab listing available boarding points for the trip.'''
+
+    @abstractmethod
+    def dropping_points_tab(self):
+        '''Opens the tab listing available dropping points for the trip.'''
+
+    @abstractmethod
+    def amenities_tab(self):
+        '''Displays the tab containing information about available amenities on the ferry.'''
+
+    @abstractmethod
+    def boarding_points_label(self):
+        '''Shows the label for the boarding points section.'''
+
+    @abstractmethod
+    def select_trip_time_button(self):
+        '''Allows users to select their preferred trip time.'''
+
+    # Format 2 - Repeated Non-Text Elements
+    @abstractmethod
+    def ferry_images_slider(self, position: Annotated[int, "positive = forward index, negative = reverse index, default = 1"]):
+        '''Displays ferry images in a swipeable slider, allowing navigation by position.'''
+
+    # Format 3 - Repeated Text-Based Elements
+    @abstractmethod
+    def boarding_point_item(self, text: Annotated[str, "text of the boarding point"], position: Annotated[int, "positive = forward index, negative = reverse index, default = 1"]):
+        '''Shows a boarding point item matching the provided text and position.'''
+
+    @abstractmethod
+    def terminal_name(self, text: Annotated[str, "text of the terminal name"], position: Annotated[int, "positive = forward index, negative = reverse index, default = 1"]):
+        '''Displays a terminal name item matching the provided text and position.'''
