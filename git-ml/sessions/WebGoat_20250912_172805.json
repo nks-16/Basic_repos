@@ -1,0 +1,416 @@
+{
+  "session_name": "WebGoat_20250912_172805",
+  "repo_url": "https://github.com/WebGoat/WebGoat.git",
+  "repo_path": "./temp_repos/WebGoat",
+  "created_at": "2025-09-12T17:29:37.557144",
+  "latest_commit_hash": "6c129eb6f8d5a2160dcd90e0e58cab4168d0b35d",
+  "git_commits": 1000,
+  "total_historical_commits": 1396,
+  "contributors_analyzed": 190,
+  "anomaly_rules": {
+    "criteria": {
+      "threshold_rules": [
+        {
+          "feature": "commit_frequency",
+          "operator": ">",
+          "threshold": 17.0,
+          "confidence": "medium",
+          "description": "commit_frequency exceeds 17.00"
+        },
+        {
+          "feature": "lines_changed_avg",
+          "operator": ">",
+          "threshold": 21378.350000000002,
+          "confidence": "medium",
+          "description": "lines_changed_avg exceeds 21378.35"
+        },
+        {
+          "feature": "lines_changed_max",
+          "operator": ">",
+          "threshold": 397535.5,
+          "confidence": "medium",
+          "description": "lines_changed_max exceeds 397535.50"
+        },
+        {
+          "feature": "files_modified_avg",
+          "operator": ">",
+          "threshold": 30.7421875,
+          "confidence": "medium",
+          "description": "files_modified_avg exceeds 30.74"
+        },
+        {
+          "feature": "files_modified_max",
+          "operator": ">",
+          "threshold": 518.6499999999994,
+          "confidence": "high",
+          "description": "files_modified_max exceeds 518.65"
+        },
+        {
+          "feature": "merge_commits",
+          "operator": ">",
+          "threshold": 1.75,
+          "confidence": "medium",
+          "description": "merge_commits exceeds 1.75"
+        },
+        {
+          "feature": "large_commits_count",
+          "operator": ">",
+          "threshold": 1.0,
+          "confidence": "medium",
+          "description": "large_commits_count exceeds 1.00"
+        },
+        {
+          "feature": "off_hours_commits",
+          "operator": ">",
+          "threshold": 6.0,
+          "confidence": "medium",
+          "description": "off_hours_commits exceeds 6.00"
+        },
+        {
+          "feature": "weekend_commits",
+          "operator": ">",
+          "threshold": 12.75,
+          "confidence": "medium",
+          "description": "weekend_commits exceeds 12.75"
+        },
+        {
+          "feature": "commits_per_day_avg",
+          "operator": ">",
+          "threshold": 5.958333333333333,
+          "confidence": "medium",
+          "description": "commits_per_day_avg exceeds 5.96"
+        },
+        {
+          "feature": "commits_per_day_max",
+          "operator": ">",
+          "threshold": 16.94999999999999,
+          "confidence": "high",
+          "description": "commits_per_day_max exceeds 16.95"
+        },
+        {
+          "feature": "unusual_time_patterns",
+          "operator": ">",
+          "threshold": 11.0,
+          "confidence": "medium",
+          "description": "unusual_time_patterns exceeds 11.00"
+        },
+        {
+          "feature": "rapid_commits_sequences",
+          "operator": ">",
+          "threshold": 1.0,
+          "confidence": "medium",
+          "description": "rapid_commits_sequences exceeds 1.00"
+        },
+        {
+          "feature": "external_domain_commits",
+          "operator": ">",
+          "threshold": 40.89999999999998,
+          "confidence": "high",
+          "description": "external_domain_commits exceeds 40.90"
+        },
+        {
+          "feature": "total_actions",
+          "operator": ">",
+          "threshold": 40.89999999999998,
+          "confidence": "high",
+          "description": "total_actions exceeds 40.90"
+        }
+      ],
+      "pattern_rules": [
+        {
+          "profile_name": "profile_1",
+          "conditions": [
+            {
+              "feature": "lines_changed_max",
+              "operator": ">",
+              "value": 67605457332.7,
+              "typical": 96579224761.0
+            },
+            {
+              "feature": "lines_changed_avg",
+              "operator": ">",
+              "value": 6876905922.90375,
+              "typical": 9824151318.43393
+            },
+            {
+              "feature": "files_modified_max",
+              "operator": ">",
+              "value": 592.55,
+              "typical": 846.5
+            },
+            {
+              "feature": "commit_message_length_avg",
+              "operator": ">",
+              "value": 26.9725,
+              "typical": 38.53214285714286
+            },
+            {
+              "feature": "commit_frequency",
+              "operator": ">",
+              "value": 17.849999999999998,
+              "typical": 25.5
+            }
+          ],
+          "risk_level": "low",
+          "description": "Pattern characterized by: massive code changes, high commit activity"
+        }
+      ],
+      "composite_rules": [
+        {
+          "name": "suspicious_activity",
+          "conditions": [
+            [
+              "commit_frequency",
+              ">",
+              17.0
+            ],
+            [
+              "off_hours_commits",
+              ">",
+              2
+            ]
+          ],
+          "description": "High commit activity during off hours",
+          "risk_level": "high"
+        },
+        {
+          "name": "data_exfiltration_risk",
+          "conditions": [
+            [
+              "large_commits_count",
+              ">",
+              1
+            ],
+            [
+              "sensitive_commits_count",
+              ">",
+              0
+            ]
+          ],
+          "description": "Large commits involving sensitive files",
+          "risk_level": "critical"
+        },
+        {
+          "name": "automation_abuse",
+          "conditions": [
+            [
+              "rapid_commits_sequences",
+              ">",
+              2
+            ],
+            [
+              "commit_frequency",
+              ">",
+              10
+            ]
+          ],
+          "description": "Automated commit patterns detected",
+          "risk_level": "medium"
+        }
+      ]
+    },
+    "feature_thresholds": {
+      "commit_frequency": {
+        "threshold": 17.0,
+        "confidence": "medium",
+        "anomaly_median": 28.0,
+        "normal_95th": 17.0,
+        "normal_99th": 30.64999999999992,
+        "separation_score": 11.0
+      },
+      "lines_changed_avg": {
+        "threshold": 21378.350000000002,
+        "confidence": "medium",
+        "anomaly_median": 115930.74285714286,
+        "normal_95th": 21378.350000000002,
+        "normal_99th": 26347317.388094984,
+        "separation_score": 94552.39285714286
+      },
+      "lines_changed_max": {
+        "threshold": 397535.5,
+        "confidence": "medium",
+        "anomaly_median": 4029320.0,
+        "normal_95th": 397535.5,
+        "normal_99th": 158221227.89999852,
+        "separation_score": 3631784.5
+      },
+      "files_modified_avg": {
+        "threshold": 30.7421875,
+        "confidence": "medium",
+        "anomaly_median": 41.857142857142854,
+        "normal_95th": 30.7421875,
+        "normal_99th": 84.93999999999998,
+        "separation_score": 11.114955357142854
+      },
+      "files_modified_max": {
+        "threshold": 518.6499999999994,
+        "confidence": "high",
+        "anomaly_median": 646.0,
+        "normal_95th": 132.0,
+        "normal_99th": 518.6499999999994,
+        "separation_score": 514.0
+      },
+      "commit_message_length_avg": {
+        "threshold": 33.871428571428574,
+        "confidence": "low",
+        "anomaly_median": 35.42857142857143,
+        "normal_95th": 71.92857142857143,
+        "normal_99th": 97.7416666666666,
+        "separation_score": -36.5
+      },
+      "merge_commits": {
+        "threshold": 1.75,
+        "confidence": "medium",
+        "anomaly_median": 3.0,
+        "normal_95th": 1.75,
+        "normal_99th": 3.0,
+        "separation_score": 1.25
+      },
+      "revert_commits": {
+        "threshold": 0.0,
+        "confidence": "low",
+        "anomaly_median": 0.0,
+        "normal_95th": 0.0,
+        "normal_99th": 1.0,
+        "separation_score": 0.0
+      },
+      "large_commits_count": {
+        "threshold": 1.0,
+        "confidence": "medium",
+        "anomaly_median": 2.0,
+        "normal_95th": 1.0,
+        "normal_99th": 3.0,
+        "separation_score": 1.0
+      },
+      "sensitive_commits_count": {
+        "threshold": 0.0,
+        "confidence": "low",
+        "anomaly_median": 0.0,
+        "normal_95th": 1.0,
+        "normal_99th": 2.9499999999999886,
+        "separation_score": -1.0
+      },
+      "off_hours_commits": {
+        "threshold": 6.0,
+        "confidence": "medium",
+        "anomaly_median": 12.0,
+        "normal_95th": 6.0,
+        "normal_99th": 14.849999999999966,
+        "separation_score": 6.0
+      },
+      "weekend_commits": {
+        "threshold": 12.75,
+        "confidence": "medium",
+        "anomaly_median": 25.0,
+        "normal_95th": 12.75,
+        "normal_99th": 29.699999999999932,
+        "separation_score": 12.25
+      },
+      "days_active": {
+        "threshold": 4.5,
+        "confidence": "low",
+        "anomaly_median": 5.0,
+        "normal_95th": 6.0,
+        "normal_99th": 10.0,
+        "separation_score": -1.0
+      },
+      "commits_per_day_avg": {
+        "threshold": 5.958333333333333,
+        "confidence": "medium",
+        "anomaly_median": 8.0,
+        "normal_95th": 5.958333333333333,
+        "normal_99th": 10.220833333333326,
+        "separation_score": 2.041666666666667
+      },
+      "commits_per_day_max": {
+        "threshold": 16.94999999999999,
+        "confidence": "high",
+        "anomaly_median": 30.0,
+        "normal_95th": 9.75,
+        "normal_99th": 16.94999999999999,
+        "separation_score": 20.25
+      },
+      "unusual_time_patterns": {
+        "threshold": 11.0,
+        "confidence": "medium",
+        "anomaly_median": 18.0,
+        "normal_95th": 11.0,
+        "normal_99th": 22.94999999999999,
+        "separation_score": 7.0
+      },
+      "rapid_commits_sequences": {
+        "threshold": 1.0,
+        "confidence": "medium",
+        "anomaly_median": 3.0,
+        "normal_95th": 1.0,
+        "normal_99th": 3.0,
+        "separation_score": 2.0
+      },
+      "unique_repositories": {
+        "threshold": 1.0,
+        "confidence": "low",
+        "anomaly_median": 1.0,
+        "normal_95th": 1.0,
+        "normal_99th": 1.0,
+        "separation_score": 0.0
+      },
+      "repository_diversity": {
+        "threshold": 0.0,
+        "confidence": "low",
+        "anomaly_median": 0.0,
+        "normal_95th": 0.0,
+        "normal_99th": 0.0,
+        "separation_score": 0.0
+      },
+      "external_domain_commits": {
+        "threshold": 40.89999999999998,
+        "confidence": "high",
+        "anomaly_median": 42.0,
+        "normal_95th": 25.75,
+        "normal_99th": 40.89999999999998,
+        "separation_score": 16.25
+      },
+      "total_actions": {
+        "threshold": 40.89999999999998,
+        "confidence": "high",
+        "anomaly_median": 42.0,
+        "normal_95th": 25.75,
+        "normal_99th": 40.89999999999998,
+        "separation_score": 16.25
+      }
+    },
+    "anomaly_profiles": {
+      "profile_0": {
+        "cluster_id": 0,
+        "size": 1,
+        "key_features": {},
+        "pattern_description": "Unusual behavior pattern detected",
+        "risk_level": "low"
+      },
+      "profile_1": {
+        "cluster_id": 1,
+        "size": 2,
+        "key_features": {
+          "lines_changed_max": {
+            "typical_value": 96579224761.0,
+            "max_observed": 193154420202.0,
+            "variability": 136577951181.4945
+          },
+          "lines_changed_avg": {
+            "typical_value": 9824151318.43393,
+            "max_observed": 19648186706.125,
+            "variability": 13893284082.50594
+          },
+          "files_modified_max": {
+            "typical_value": 846.5,
+            "max_observed": 1047.0,
+            "variability": 283.5498192558056
+          },
+          "commit_message_length_avg": {
+            "typical_value": 38.53214285714286,
+            "max_observed": 44.75,
+            "variability": 8.793377900326993
+          },
+          "commit_frequency": {
+            "typical_value": 25.5,
+            "max_observed": 
